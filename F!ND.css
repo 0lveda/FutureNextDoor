@@ -1,0 +1,958 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+ }
+html{
+	  height:100%;
+	  overflow-x:hidden;
+ }
+body{
+	width:100%;
+	height:100%;
+	min-width:100%;
+	min-height:100%;
+}
+header{
+	   display:flex;
+	   align-items:center;
+	   justify-content:center;
+	   height:10vh;
+	   width:100%;
+	   background:#114d97;
+}
+.brand h1 a{
+	        color:#33b0ff;   
+			text-shadow:0px 6px 3px  #000a1a;
+}
+.brand h1 span{
+	        color:yellow;   
+			text-shadow:0px 6px 3px  #000a1a;			
+}
+.nav ul{
+        display:flex;
+     	margin-top:3em;
+}
+.nav li{
+	    list-style-type:none;
+}
+.nav a{
+	   text-decoration:none;
+	   color:white;
+	   font-size:2.4em;
+	   padding: 0.3em 2em;
+	   font-family:tahoma;
+}
+.nav li a:hover{
+	         color:yellow;
+			 border-bottom:2px solid yellow;
+}
+#hero-page{
+	  height:100%;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+	  background:#114d97;
+}
+@keyframes Hbg{
+	           100%{
+				    filter: hue-rotate(20deg);
+			       }
+}
+	
+.pulse{
+       position:relative;
+	   bottom:4%;
+	   right:24%;
+	   width:25%;
+	   height:45%;
+	   background:#2E77CB;
+	   border-radius:50%;
+}
+.Hlogo img{
+	   position:absolute;
+	   z-index:1;
+	   width:100%;
+	   height:100%;
+	   border:5px solid #2E77CB;
+	   border-radius:50%;
+	   cursor:pointer;
+}
+.pulse span{
+	        position:absolute;
+			width:100%;
+			height:100%;
+			background:inherit;
+			border-radius:inherit;
+			opacity:.8;
+			animation: beat 3s ease-out infinite;
+			animation-delay:calc(1s*var(--i));
+}
+@keyframes beat{
+	            100%{
+					opacity:0;
+					transform:scale(2);
+				}
+}
+.hp-title{
+	      position:absolute;
+		  left:50%;
+		  bottom:5%;
+}
+.hp-inside{
+	       font-family:tahoma;
+		   line-height:1;
+		   display:flex;
+		   flex-direction:column;
+		   align-items:center;
+		   justify-content:center;
+		   margin:0 auto;
+		   cursor:pointer;
+}
+.hp-inside i{
+	         font-family:tahoma;
+			 color:yellow;
+}
+.hp-inside span{
+	         font-size:1.8rem;
+			 text-align:center;
+			 letter-spacing:0.1em;
+			 margin-bottom:1.5rem;
+			 position:relative;
+			 top:80%;
+			 display:flex;
+			 justify-content:center;
+			 align-items:center;
+			 color:white; 
+			 max-width:80%;
+			  font-family: "Montserrat", sans-serif;
+}
+.hp-inside h3{
+	            position:relative;
+	            font-size:15em;
+				color: white;
+				text-shadow:0px 6px 3px  #000a1a;
+				letter-spacing:0.1em;
+				margin-bottom:1.5rem;
+}
+.hp-inside p{
+	         font-size:3.5em;
+			 margin-bottom:1.5rem;
+			 position:relative;
+			 top:20%;
+			 display:flex;
+			 justify-content:center;
+			 align-items:center;
+			 color:white; 
+}
+.hp-inside a{
+	         text-decoration:none;
+}
+.hp-inside button {
+  font-size: 1.8rem;
+  position: relative;
+  margin-top:1rem;
+  padding: 1em 5.5em 1em 5.5em;
+  border: none;
+  background: yellow;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+  color:blue;
+}
+.hp-inside button:active {
+  transform: scale(0.95);
+}
+
+.hp-inside button span {
+  color: #464646;
+}
+
+.hp-inside button .border {
+  position: absolute;
+  border: 0.15em solid yellow;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 20em;
+  height: 3em;
+  transform: translate(-50%, -50%);
+}
+.button2 button{
+				padding:1em 4.6em 1em 4.6em;
+}
+	 
+.hp-inside button:hover .border {
+  display: block;
+  width: 21.8em;
+  height: 3.8em;
+}
+.full-rounded {
+  border-radius: 2em;
+}
+svg{
+    position:absolute;
+	top:20%;
+	left:45%;
+	right:5%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	fill:none;
+	width:55%;
+	height:100%;
+}
+#section2 {
+    background-color: #f9dc5c;
+    color: white; 
+	height:100vh;
+}
+.contents{
+		  line-height:1.2;
+		  position:absolute;
+		  margin:1em 5em 1em 5em;
+		  padding:1em 2em 1em 2em;
+}
+.contents h1{
+	         font-size:4em;
+			 color:white;
+			 position:relative;
+			 margin-bottom:1.5%;
+			 font-family:tahoma;
+}
+.content1{
+	      display:flex;
+		  align-items:center;
+		  justify-content:center;
+		  position:relative;
+          margin-top:1.5%;
+		  font-family: "Montserrat", sans-serif;
+} 
+.content1 h6{
+	        font-size:1.8em;
+}
+.contents span{
+			font-size:2em;
+			position:relative;
+			margin-top:20%;
+}
+.content2{
+	      display:flex;
+		  justify-content:center;
+		  align-items:center;
+		  position:relative;
+		  margin-top:2%;
+}
+.content2 p{
+			font-size:2em;
+}
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card > .row > .icon {
+    background: #114d97;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description p {
+    color: white;
+    padding-top: 5px;
+}
+.description h4 {
+    text-transform: uppercase;
+}
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.card[for="c1"] {
+    background-image: url(R.jpg);
+}
+.card[for="c2"] {
+    background-image: url(I.jpg);
+}
+.card[for="c3"] {
+    background-image: url(A.jpg);
+}
+.card[for="c4"] {
+    background-image: url(S.jpg);
+}
+.card[for="c5"] {
+    background-image: url(E.jpg);
+}.card[for="c6"] {
+    background-image: url(C.jpg);
+}
+
+.cards .blue {
+  background-color: #33b0ff;
+  margin-bottom:2%;
+  line-height:1.5;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: #000a1a;
+  cursor: pointer;
+  transition: 400ms transform, 400ms box-shadow, 400ms background-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+  max-width:80%;
+}
+
+.cards .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: #000a1a;
+  color: #33b0ff;
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.container2{
+			display:none;
+}
+footer{
+	   position:absolute;
+	   background: #132639;
+	   height:auto;
+	   width:100%;
+	   padding-top:3em;
+	   color:#fff;
+	   margin:auto;
+	   font-family:tahoma;
+}
+.footer-content{
+	            display:flex;
+				align-items:center;
+				justify-content:center;
+				flex-direction:column;
+				text-align:center;		
+}
+.footer-content h3{
+	               font-size:1.8rem;
+				   font-weight:400;
+				   text-transform:capitalize;
+				   line-height:3rem;
+}
+.footer-content p{
+	              max-width:100%;
+				  margin:10px auto;
+				  line-height:20px;
+				  font-size:14px;
+}
+.connect{
+	     list-style:none;
+		 display:flex;
+		 align-items:center;
+		 justify-content:center;
+		 margin:1rem 0 3rem 0;
+}
+.connect li{
+	        margin:0px 20px;
+}
+.connect a{
+	       text-decoration:none;
+		   color:#fff;
+}
+.connect a i{
+	         font-size:2.3rem;
+}
+.connect a:hover i{
+				   color:#33b0ff;
+}
+.footer-bottom{
+	           background:#0d1a26;
+			   width:100%;
+			   padding:20px 0;
+			   text-align:center;
+}
+.footer-bottom p{
+	             font-size:14px;
+				 word-spacing:2px;
+				 text-transform:capitalize;
+}
+.footer-bottom span{
+	                text-transform:uppercase;
+					opacity:.4;
+					font-weight:200;
+}
+
+@media only screen and (max-width: 319px) {
+  /* Styles for devices up to 319px wide */
+header{
+	   height:20vh;
+}
+#hero-page{
+		   height:110vh;
+}
+.nav ul{
+     	margin-top:6em;
+		display:block;
+		justify-content:center;
+		align-items:center;
+		text-align:center;
+		position:relative;
+		z-index:1000;
+}
+.nav a{
+	   font-size:1.5em;
+}
+.pulse{
+       position:relative;
+	   left:0.2%;
+	   right:0.2%;
+	   bottom:22%;
+	   width:70vw;
+	   height:40vh;
+}
+.Hlogo img{
+	   width:70vw;
+	   height:40vh;
+}
+.hp-title{
+	      position:absolute;
+		  left:0%;
+		  top:70%;
+		  z-index:2;
+}
+.hp-inside span{
+	         font-size:0.8rem; 
+			 max-width:70%;
+}
+.hp-inside h3{
+	            font-size:3em;
+				margin-bottom:1rem;
+}
+.hp-inside p{
+	         font-size:1.5em;
+			 margin-bottom:0.5rem;
+			 max-width:80%;
+}
+.hp-inside button {
+  font-size: 0.75rem;
+  position: relative;
+  margin-top:0.5rem;
+}
+
+#section2{
+		height:230vh;
+}
+.contents{
+		  line-height:1;
+		  margin:0 auto;
+		  padding:1em 1.5em 1em 1.5em;
+		  max-width:100%;
+}
+.contents h1{
+	         font-size:1.2em;
+			 margin-bottom:5%;
+}
+.content1{
+          margin-top:10%;
+		  margin-left:5%;
+		  max-width:90%;
+		  display:block;
+		  justify-content:center;
+		  align-items:center;	
+} 
+.content1 h6{
+	        font-size:1em;
+}
+	.contents span{
+			font-size:1em;
+}
+	.content2{
+		  position:relative;
+		  margin-top:15%;
+}
+	.content2 p{
+			font-size:1em;
+}
+	.container {
+		display:none;
+}
+
+.cards .card {
+  position:relative;
+  top:3%;
+  bottom:10%;
+  height: 20vh;
+  width: 70vw;
+}
+.container2{
+			display:flex;
+}
+footer{
+	   padding-top:1.5em;
+}
+.footer-content h3{
+	               font-size:1.2rem;
+				   line-height:1rem;
+}
+.footer-content p{
+	              max-width:80%;
+				  margin:2px auto;
+				  line-height:1.2;
+				  font-size:0.8em;
+}
+.connect{
+		 margin:1rem 0 1rem 0;
+}
+.connect li{
+	        margin:0px 15px;
+}
+.connect a i{
+	         font-size:1.5rem;
+}
+.footer-bottom{
+			   padding:10px 0;
+}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  /* Styles for devices between 320px and 767px wide (typically smartphones) */
+header{
+	   height:15vh;
+}
+#hero-page{
+		   height:115vh;
+}
+.nav ul{
+     	margin-top:10em;
+		display:block;
+		justify-content:center;
+		align-items:center;
+		text-align:center;
+		position:relative;
+		z-index:1000;
+}	
+.nav a{
+	   font-size:1.7em;
+	   padding: 0.3em 1em;
+}
+.pulse{
+       position:relative;
+	   left:0%;
+	   bottom:15%;
+	   width:80vw;
+	   height:40vh;
+}
+.Hlogo img{
+	   width:80vw;
+	   height:40vh;
+}
+.hp-title{
+	      position:absolute;
+		  left:0%;
+		  top:75%;
+		  z-index:2;
+}
+.hp-inside span{
+	         font-size:0.8rem; 
+}
+.hp-inside h3{
+	            font-size:2.5em;
+				margin-bottom:1rem;
+}
+.hp-inside p{
+	         font-size:1.5em;
+			 margin-bottom:0.5rem;
+}
+.hp-inside button {
+  font-size: 0.8rem;
+  position: relative;
+  margin-top:0.5rem;
+}
+#section2{
+		height:220vh;
+}
+.contents{
+		  line-height:1;
+		  margin:0 auto;
+		  padding:1em 1.5em 1em 1.5em;
+}
+.contents h1{
+	         font-size:1.2em;
+			 margin-bottom:4%;
+}
+.content1{
+          margin-top:3%;
+		  margin-left:5%;
+		  max-width:90%;
+		  display:block;
+		  justify-content:center;
+		  align-items:center;	
+} 
+.content1 h6{
+	        font-size:1em;
+}
+	.contents span{
+			font-size:1em;
+}
+	.content2{
+		  position:relative;
+		  margin-top:10%;
+}
+	.content2 p{
+			font-size:1em;
+}
+	.container {
+		display:none;
+}
+
+.cards .card {
+  position:relative;
+  top:3%;
+  left:1%;
+  bottom:10%;
+  height: 20vh;
+  width: 70vw;
+}
+.container2{
+			display:flex;
+}
+footer{
+	   padding-top:1.5em;
+}
+.footer-content h3{
+	               font-size:1rem;
+				   line-height:1rem;
+}
+.footer-content p{
+				  margin:2px auto;
+				  line-height:1.2;
+				  font-size:0.8em;
+				  max-width:80%;
+}
+.connect{
+		 margin:1rem 0 1rem 0;
+}
+.connect li{
+	        margin:0px 15px;
+}
+.connect a i{
+	         font-size:1.5rem;
+}
+.footer-bottom{
+			   padding:10px 0;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for devices between 768px and 1023px wide (typically tablets) */
+   header{
+	   height:15vh;
+}
+#hero-page{
+		   height:100vh;
+}
+.nav ul{
+     	margin-top:2em;
+		z-index:1000;
+		position:relative;
+}
+.nav a{
+	   font-size:1.4em;
+	   padding: 0.3em 1em;
+}
+.pulse{
+       position:relative;
+	   left:0%;
+	   bottom:25%;
+	   width:50vw;
+	   height:50vh;
+}
+.Hlogo img{
+	   width:50vw;
+	   height:50vh;
+}
+.hp-title{
+	      position:absolute;
+		  left:0%;
+		  top:63%;
+		  z-index:2;
+}
+.hp-inside span{
+	         font-size:1rem; 
+			 max-width:80%;
+}
+.hp-inside h3{
+	            font-size:3em;
+				margin-bottom:1rem;
+}
+.hp-inside p{
+	         font-size:1.5em;
+			 margin-bottom:0.5rem;
+			 max-width:80%;
+}
+.hp-inside button {
+  font-size: 1rem;
+  position: relative;
+  margin-top:0.5rem;
+}
+#section2{
+		height:175vh;
+}
+.contents{
+		  line-height:1;
+		  margin:0 auto;
+		  padding:1em 1.5em 1em 1.5em;
+		  max-width:100%;
+}
+.contents h1{
+	         font-size:1.8em;
+			 margin-bottom:3%;
+}
+.content1{
+          margin-top:2%;
+		  margin-left:5%;
+		  max-width:90%;
+		  display:block;
+		  justify-content:center;
+		  align-items:center;	
+} 
+.content1 h6{
+	        font-size:1.3em;
+}
+	.contents span{
+			font-size:1.3em;
+}
+	.content2{
+		  position:relative;
+		  margin-top:5%;
+}
+	.content2 p{
+			font-size:1.3em;
+}
+	.container {
+		display:none;
+}
+
+.cards .card {
+  position:relative;
+  top:3%;
+  left:15%;
+  bottom:10%;
+  height: 15vh;
+  width: 60vw;
+}
+.container2{
+			display:flex;
+}
+footer{
+	   padding-top:1.5em;
+}
+.footer-content h3{
+	               font-size:1.2rem;
+				   line-height:1rem;
+}
+.footer-content p{
+	              max-width:80%;
+				  margin:2px auto;
+				  line-height:1.2;
+				  font-size:0.8em;
+}
+.connect{
+		 margin:1rem 0 1rem 0;
+}
+.connect li{
+	        margin:0px 15px;
+}
+.connect a i{
+	         font-size:1.5rem;
+}
+.footer-bottom{
+			   padding:10px 0;
+}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1360px) {
+  /* Styles for devices between 768px and 1023px wide (typically tablets) */
+   header{
+	   height:15vh;
+}
+#hero-page{
+		   height:100vh;
+}
+.nav ul{
+     	margin-top:2em;
+		z-index:1000;
+		position:relative;
+}
+.nav a{
+	   font-size:1.4em;
+	   padding: 0.3em 1em;
+}
+.pulse{
+       position:relative;
+	   left:0%;
+	   bottom:25%;
+	   width:50vw;
+	   height:50vh;
+}
+.Hlogo img{
+	   width:50vw;
+	   height:50vh;
+}
+.hp-title{
+	      position:absolute;
+		  left:0%;
+		  top:63%;
+		  z-index:2;
+}
+.hp-inside span{
+	         font-size:1rem; 
+			 max-width:80%;
+}
+.hp-inside h3{
+	            font-size:3em;
+				margin-bottom:1rem;
+}
+.hp-inside p{
+	         font-size:1.5em;
+			 margin-bottom:0.5rem;
+			 max-width:80%;
+}
+.hp-inside button {
+  font-size: 1rem;
+  position: relative;
+  margin-top:0.5rem;
+}
+#section2{
+		height:175vh;
+}
+.contents{
+		  line-height:1;
+		  margin:0 auto;
+		  padding:1em 1.5em 1em 1.5em;
+		  max-width:100%;
+}
+.contents h1{
+	         font-size:1.8em;
+			 margin-bottom:3%;
+}
+.content1{
+          margin-top:2%;
+		  margin-left:5%;
+		  max-width:90%;
+		  display:block;
+		  justify-content:center;
+		  align-items:center;	
+} 
+.content1 h6{
+	        font-size:1.3em;
+}
+	.contents span{
+			font-size:1.3em;
+}
+	.content2{
+		  position:relative;
+		  margin-top:5%;
+}
+	.content2 p{
+			font-size:1.3em;
+}
+	.container {
+		display:none;
+}
+
+.cards .card {
+  position:relative;
+  top:3%;
+  left:15%;
+  bottom:10%;
+  height: 15vh;
+  width: 60vw;
+}
+.container2{
+			display:flex;
+}
+footer{
+	   padding-top:1.5em;
+}
+.footer-content h3{
+	               font-size:1.2rem;
+				   line-height:1rem;
+}
+.footer-content p{
+	              max-width:80%;
+				  margin:2px auto;
+				  line-height:1.2;
+				  font-size:0.8em;
+}
+.connect{
+		 margin:1rem 0 1rem 0;
+}
+.connect li{
+	        margin:0px 15px;
+}
+.connect a i{
+	         font-size:1.5rem;
+}
+.footer-bottom{
+			   padding:10px 0;
+}
+}

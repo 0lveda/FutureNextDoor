@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> FutureNextDoor </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="png" href="logo.png">
+	<link rel="stylesheet" href="F!ND(4).css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+                
+</head>
+<body>
+		<header>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="careers.html"> Careers</a></li>
+			<div class="brand">
+				<h1><a href="index.html">F<span>!</span>ND</a></h1>
+			</div>	
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</div>
+		</header>
+		
+	<section id="section1">
+	<div class="box">
+    <div class="title">
+        <h2>Welcome to F!ND - FutureNextDoor!</h2>
+        <p>Where we discover what's next. We're here to guide individuals who are struggling to choose their career path or seeking to explore new opportunities. Our platform is designed to simplify your career exploration journey.</p>
+    </div>
+    <div class="content">
+        <div class="alignment">
+            <div class="text">
+                <p>At F!ND - FutureNextDoor, we aim to empower individuals in navigating their professional journeys by offering valuable resources, insights, and support. Whether you're just starting out or contemplating a career change, we're here to help you make informed decisions about your future.</p><br>
+                <p>We extend our heartfelt acknowledgments to all the members who have contributed to building this website and shaping its content. Your dedication and expertise have been instrumental in creating a valuable resource for our community. Thank you for your invaluable contributions!</p><br>
+                <p>As we continue to grow and evolve, our commitment remains unwavering: to provide you with the tools and support you need to discover your next steps in your career journey. Let's embark on this exciting adventure together! Discover What's Next.</p><br>
+            </div>
+			<div class="logo">
+			<img src="logo.png" alt="logo">
+			</div>
+        </div>
+    </div>
+	</div>
+	</section>
+	
+	<section id="section2">
+	<h1>Meet Our Team</h1>
+    <div class="container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          <
+        </button>
+        <ul class="image-list">
+          <img class="image-item" src="LA.jpg" alt="LA" />
+          <img class="image-item" src="RO.jpg" alt="RO" />
+          <img class="image-item" src="AA.jpg" alt="AA" />
+          <img class="image-item" src="GG.jpg" alt="GG" />
+          <img class="image-item" src="DD.jpg" alt="DD" />
+          <img class="image-item" src="NM.jpg" alt="NM" />
+          <img class="image-item" src="IA.jpg" alt="IA" />
+          <img class="image-item" src="JM.jpg" alt="JM" />
+          <img class="image-item" src="MD.jpg" alt="MD" />
+          <img class="image-item" src="LC.jpg" alt="LC" />
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          >
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+	
+	<script>
+		const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+	</script>
+	<footer>
+	<div class="footer-content">
+		<h3> F!ND - FutureNextDoor </h3>
+		<p> FutureNextDoor (F!ND) is an online website that will help you discover your future, the next door of your life. </p>
+		<ul class="connect">
+		<li><a href="https://www.facebook.com/profile.php?id=61558683475235&mibextid=ZbWKwL"><i class="fa-brands fa-facebook fa-beat"></i></a></li>
+		<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Finvites%2Fcontact%2F%3Fi%3D16gk4a4bh6fqm%26utm_content%3Duh8dqqp%26fbclid%3DIwZXh0bgNhZW0CMTAAAR1mJ4F7TbrhxYfgZOqW6iqY-sXZOn7U3JUXdaUs_0mGUEv-Pf1qDQRbgh0_aem_AfNZ__LG-L-Rx3DLzjoArLiFEBYe400x4s-d1AzMXfnxzUCVS6tdw4qRjDKJIrkico2RgmCHlWrHw1gHsYGttxsJ&h=AT1GRRtmWauIByEe2ox359AFXk3VZw5AIVTEtuMG2_uH5Nbno-8Ex8f4vDGKMWdDNH1S8lU_SUX47Gy1GXQ3KDlb1tLlatFOMUdbFKIDdqKh5a2DDHq0rrJeuUfRVHJQm9J8fw"><i class="fa-brands fa-instagram fa-beat"></i></a></li>
+		<li><a href="#"><i class="fa-brands fa-youtube fa-beat"></i></a></li>
+		<li><a href="#"><i class="fa-solid fa-envelope fa-beat"></i></a></li>
+		</div>
+		<div class="footer-bottom">
+		<p>@2024 FutureNextDoor. created by <span> JobAll </span></p> 
+		</div>
+	</footer>
+</body>
+</html>
